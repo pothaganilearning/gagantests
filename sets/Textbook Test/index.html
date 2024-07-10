@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="../logo.png" alt="Logo" class="logo">
+            <h1 class="title">Test: Real Numbers</h1>
+        </header>
+        <main class="main-content">
+            <div class="instructions">
+                <h2>Instructions</h2>
+                <p>Please answer the following questions. Click on each image to enlarge and read the question.</p>
+            </div>
+
+            <div class="question-section">
+                <h2>Multiple Choice Questions (MCQ)</h2>
+                <div class="question">
+                    <img src="Questions/mcq1.png" alt="Question 1" class="question-image">
+                    <form class="question-form" data-question-id="mcq1">
+                        <label><input type="radio" name="mcq1" value="a"> A</label>
+                        <label><input type="radio" name="mcq1" value="b"> B</label>
+                        <label><input type="radio" name="mcq1" value="c"> C</label>
+                        <label><input type="radio" name="mcq1" value="d"> D</label>
+                    </form>
+                </div>
+                <!-- Add more MCQ questions as needed -->
+            </div>
+
+            <div class="question-section">
+                <h2>Multiple Select Questions (MSQ)</h2>
+                <div class="question">
+                    <img src="Questions/msq1.png" alt="Question 1" class="question-image">
+                    <form class="question-form" data-question-id="msq1">
+                        <label><input type="checkbox" name="msq1" value="a"> A</label>
+                        <label><input type="checkbox" name="msq1" value="b"> B</label>
+                        <label><input type="checkbox" name="msq1" value="c"> C</label>
+                        <label><input type="checkbox" name="msq1" value="d"> D</label>
+                    </form>
+                </div>
+                <!-- Add more MSQ questions as needed -->
+            </div>
+
+            <div class="question-section">
+                <h2>Fill in the Blanks</h2>
+                <div class="question">
+                    <img src="Questions/fill1.png" alt="Question 1" class="question-image">
+                    <form class="question-form" data-question-id="fill1">
+                        <input type="text" name="fill1" placeholder="Your answer here">
+                    </form>
+                </div>
+                <!-- Add more Fill in the Blanks questions as needed -->
+            </div>
+
+            <div class="question-section">
+                <h2>Matching</h2>
+                <div class="question">
+                    <img src="Questions/matching1.png" alt="Question 1" class="question-image">
+                    <form class="question-form" data-question-id="matching1">
+                        <!-- Matching input fields can be added here -->
+                    </form>
+                </div>
+                <!-- Add more Matching questions as needed -->
+            </div>
+
+            <div class="question-section">
+                <h2>Numerical Answer Type (NAT)</h2>
+                <div class="question">
+                    <img src="Questions/nat1.png" alt="Question 1" class="question-image">
+                    <form class="question-form" data-question-id="nat1">
+                        <input type="number" name="nat1" placeholder="Your answer here">
+                    </form>
+                </div>
+                <!-- Add more NAT questions as needed -->
+            </div>
+
+            <div class="question-section">
+                <h2>True or False</h2>
+                <div class="question">
+                    <img src="Questions/truefalse1.png" alt="Question 1" class="question-image">
+                    <form class="question-form" data-question-id="truefalse1">
+                        <label><input type="radio" name="truefalse1" value="true"> True</label>
+                        <label><input type="radio" name="truefalse1" value="false"> False</label>
+                    </form>
+                </div>
+                <!-- Add more True or False questions as needed -->
+            </div>
+
+            <div class="question-section">
+                <h2>Drag and Drop</h2>
+                <div class="question">
+                    <img src="Questions/dragdrop1.png" alt="Question 1" class="question-image">
+                    <!-- Drag and Drop implementation -->
+                </div>
+                <!-- Add more Drag and Drop questions as needed -->
+            </div>
+        </main>
+        <footer class="footer">
+            &copy; 2024 Educational Platform. All rights reserved.
+        </footer>
+        <button onclick="submitTest()">Submit Test</button>
+        <div id="summary"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
