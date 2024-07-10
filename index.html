@@ -3,192 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .header img {
-            width: 50px;
-            vertical-align: middle;
-        }
-        .header h1 {
-            display: inline;
-            font-size: 24px;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-        .banner {
-            background: url('banner.jpg') no-repeat center center/cover;
-            height: 300px;
-            text-align: center;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 36px;
-            font-weight: bold;
-        }
-        .main-content {
-            display: flex;
-            justify-content: space-around;
-            padding: 50px 0;
-            background-color: #fff;
-        }
-        .main-content div {
-            background-color: #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            width: 30%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-        .main-content div:hover {
-            transform: scale(1.05);
-        }
-        .main-content h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .chapter-list, .test-list {
-            display: none;
-            padding: 20px;
-            background-color: #fff;
-        }
-        .chapter-list h2, .test-list h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .chapter-list ul, .test-list ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .chapter-list li, .test-list li {
-            font-size: 18px;
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-            cursor: pointer;
-        }
-        .footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>Online Test Portal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
-        <img src="logo.png" alt="Logo">
-        <h1>Educational Platform</h1>
-    </div>
-    <div class="banner">
-        Welcome to Our Learning Platform
-    </div>
-    <div class="main-content">
-        <div id="maths">
-            <h2>Maths</h2>
-            <p>Explore our collection of maths resources.</p>
-        </div>
-        <div id="physics">
-            <h2>Physics</h2>
-            <p>Discover the world of physics with our materials.</p>
-        </div>
-        <div id="chemistry">
-            <h2>Chemistry</h2>
-            <p>Dive into chemistry with our comprehensive guides.</p>
-        </div>
-    </div>
-    <div id="mathsChapters" class="chapter-list">
-        <h2>Maths Chapters</h2>
+    <header>
+        <h1>Online Test Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="Maths.html">Maths</a></li>
+                <li><a href="Physics.html">Physics</a></li>
+                <li><a href="Chemistry.html">Chemistry</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Select a Test</h2>
         <ul>
-            <li onclick="showTests('maths', 'Real Numbers')">Real Numbers</li>
-            <li onclick="showTests('maths', 'Sets')">Sets</li>
-            <li onclick="showTests('maths', 'Algebra')">Algebra</li>
-            <li onclick="showTests('maths', 'Geometry')">Geometry</li>
-            <li onclick="showTests('maths', 'Trigonometry')">Trigonometry</li>
+            <li><a href="Textbook Test/index.html">Textbook Test</a></li>
+            <li><a href="CBSE Test/index.html">CBSE Test</a></li>
+            <li><a href="Easy/index.html">Easy</a></li>
+            <li><a href="Intermediate/index.html">Intermediate</a></li>
+            <li><a href="Difficult/index.html">Difficult</a></li>
+            <li><a href="Complex/index.html">Complex</a></li>
         </ul>
-    </div>
-    <div id="physicsChapters" class="chapter-list">
-        <h2>Physics Chapters</h2>
-        <ul>
-            <li onclick="showTests('physics', 'Mechanics')">Mechanics</li>
-            <li onclick="showTests('physics', 'Thermodynamics')">Thermodynamics</li>
-            <li onclick="showTests('physics', 'Optics')">Optics</li>
-            <li onclick="showTests('physics', 'Electromagnetism')">Electromagnetism</li>
-            <li onclick="showTests('physics', 'Quantum Physics')">Quantum Physics</li>
-        </ul>
-    </div>
-    <div id="chemistryChapters" class="chapter-list">
-        <h2>Chemistry Chapters</h2>
-        <ul>
-            <li onclick="showTests('chemistry', 'Atomic Structure')">Atomic Structure</li>
-            <li onclick="showTests('chemistry', 'Chemical Bonding')">Chemical Bonding</li>
-            <li onclick="showTests('chemistry', 'Thermochemistry')">Thermochemistry</li>
-            <li onclick="showTests('chemistry', 'Organic Chemistry')">Organic Chemistry</li>
-            <li onclick="showTests('chemistry', 'Inorganic Chemistry')">Inorganic Chemistry</li>
-        </ul>
-    </div>
-    <div id="tests" class="test-list">
-        <h2 id="testHeader">Tests</h2>
-        <ul id="testList">
-            <!-- Test items will be dynamically inserted here -->
-        </ul>
-    </div>
-    <div class="footer">
-        &copy; 2024 Educational Platform. All rights reserved.
-    </div>
-
-    <script>
-        document.getElementById('maths').onclick = function() {
-            toggleVisibility('mathsChapters');
-        };
-        document.getElementById('physics').onclick = function() {
-            toggleVisibility('physicsChapters');
-        };
-        document.getElementById('chemistry').onclick = function() {
-            toggleVisibility('chemistryChapters');
-        };
-
-        function toggleVisibility(id) {
-            const sections = document.querySelectorAll('.chapter-list, .test-list');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(id).style.display = 'block';
-        }
-
-        function showTests(subject, chapter) {
-            toggleVisibility('tests');
-            document.getElementById('testHeader').innerText = `${chapter} - Tests`;
-            const testList = document.getElementById('testList');
-            testList.innerHTML = `
-                <li onclick="openTest('${chapter}/Textbook Test')">Textbook Test</li>
-                <li onclick="openTest('${chapter}/CBSE Test')">CBSE Test</li>
-                <li onclick="openTest('${chapter}/Easy')">Easy</li>
-                <li onclick="openTest('${chapter}/Intermediate')">Intermediate</li>
-                <li onclick="openTest('${chapter}/Difficult')">Difficult</li>
-                <li onclick="openTest('${chapter}/Complex')">Complex</li>
-            `;
-        }
-
-        function openTest(path) {
-            window.location.href = path + '/index.html';
-        }
-    </script>
+    </main>
 </body>
 </html>
