@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header img.logo {
+    width: 100px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.banner {
+    margin-bottom: 2rem;
+}
+
+.subject-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.subject-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.subject-card:hover {
+    transform: scale(1.05);
+}
+
+.subject-card h3 {
+    margin: 0;
+    color: #333;
+}
+
+.subject-card a {
+    text-decoration: none;
+    color: inherit;
+}
