@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 questionDiv.appendChild(questionTitle);
                 
                 const questionImage = document.createElement('img');
-                questionImage.src = `Questions/${questionId}.png`;
+                questionImage.src = `Questions/${questionId}.PNG`;
                 questionImage.onerror = () => questionDiv.removeChild(questionImage);
                 questionDiv.appendChild(questionImage);
                 
