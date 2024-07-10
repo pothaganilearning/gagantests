@@ -11,21 +11,21 @@ document.addEventListener('DOMContentLoaded', function () {
             questions.forEach((questionId, index) => {
                 const questionDiv = document.createElement('div');
                 questionDiv.classList.add('question-form');
-                
+
                 const questionTitle = document.createElement('h3');
                 questionTitle.textContent = `Question ${index + 1}`;
                 questionDiv.appendChild(questionTitle);
-                
+
                 const questionImage = document.createElement('img');
-                questionImage.src = `Questions/${questionId}.PNG`;
+                questionImage.src = `Questions/${questionId}.PNG`; // Ensure the extension is .PNG
                 questionImage.onerror = () => questionDiv.removeChild(questionImage);
                 questionDiv.appendChild(questionImage);
-                
+
                 const answerInput = document.createElement('input');
                 answerInput.type = 'text';
                 answerInput.name = questionId;
                 questionDiv.appendChild(answerInput);
-                
+
                 questionsContainer.appendChild(questionDiv);
             });
         })
